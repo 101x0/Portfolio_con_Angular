@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+}
+
+.card_container {
+  margin: 0px 30px 20px;
+}
+
+.card_container a {
+  display: inline-block;
+}
+
+
+.card_container:hover figure {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  -ms-transform: perspective(600px) rotateY(180deg);
+  -o-transform: perspective(600px) rotateY(180deg);
+  transform: perspective(600px) rotateY(180deg);
+
+  -webkit-box-shadow: -25px 25px 32px -2px rgba(0,0,0,0.74);
+  -moz-box-shadow: -25px 25px 32px -2px rgba(0,0,0,0.74);
+  box-shadow: -25px 25px 32px -2px rgba(0,0,0,0.74);
+  cursor: pointer;
+}
+
+.card_container:hover figure img {
+  filter: blur(1px);
+}
+
+figure {
+  width: 300px;
+  height: 350px;
+  margin: 0;
+  position: relative;
+  transition: all ease .5s;
+  transform-style: preserve-3d;
+  transform: perspective(600px) rotateY(0deg);
+  border-radius: 5px;
+}
+
+figure .front,
+figure .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all ease .5s;
+}
+
+figure .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: black;
+  transform: perspective(600px) rotateY(180deg);
+  backface-visibility: hidden;
+  overflow: auto;
+}
+
+figure .back h2 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+figure .back hr {
+  height: 2px;
+  background: white;
+  border: none;
+  margin-bottom: 20px;
+  opacity: .5;
+}
+
+figure .back p {
+  line-height: 25px;
+  font-size: 17px;
+}
+
+.card_container:nth-child(1) figure .back {
+  background: rgba(194,210,226,1);
+  background: -moz-linear-gradient(-45deg, rgba(194,210,226,1) 0%, rgba(36,91,142,0.59) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(194,210,226,1)), color-stop(100%, rgba(36,91,142,0.59)));
+  background: -webkit-linear-gradient(-45deg, rgba(194,210,226,1) 0%, rgba(36,91,142,0.59) 100%);
+  background: -o-linear-gradient(-45deg, rgba(194,210,226,1) 0%, rgba(36,91,142,0.59) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(194,210,226,1) 0%, rgba(36,91,142,0.59) 100%);
+  background: linear-gradient(135deg, rgba(194,210,226,1) 0%, rgba(36,91,142,0.59) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2d2e2', endColorstr='#245b8e', GradientType=1 );
+}
+
+.card_container:nth-child(2) figure .back {
+  background: rgba(235,228,216,1);
+  background: -moz-linear-gradient(-45deg, rgba(235,228,216,1) 0%, rgba(68,50,31,0.59) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(235,228,216,1)), color-stop(100%, rgba(68,50,31,0.59)));
+  background: -webkit-linear-gradient(-45deg, rgba(235,228,216,1) 0%, rgba(68,50,31,0.59) 100%);
+  background: -o-linear-gradient(-45deg, rgba(235,228,216,1) 0%, rgba(68,50,31,0.59) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(235,228,216,1) 0%, rgba(68,50,31,0.59) 100%);
+  background: linear-gradient(135deg, rgba(235,228,216,1) 0%, rgba(68,50,31,0.59) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d8', endColorstr='#44321f', GradientType=1 );
+}
+
+.card_container:nth-child(2) figure .back p {
+  line-height: 19px;
+  font-size: 17px;
+}
+
+.card_container:nth-child(3) figure .back {
+  background: rgba(208,210,211,1);
+  background: -moz-linear-gradient(-45deg, rgba(208,210,211,1) 0%, rgba(49,68,68,0.72) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(208,210,211,1)), color-stop(100%, rgba(49,68,68,0.72)));
+  background: -webkit-linear-gradient(-45deg, rgba(208,210,211,1) 0%, rgba(49,68,68,0.72) 100%);
+  background: -o-linear-gradient(-45deg, rgba(208,210,211,1) 0%, rgba(49,68,68,0.72) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(208,210,211,1) 0%, rgba(49,68,68,0.72) 100%);
+  background: linear-gradient(135deg, rgba(208,210,211,1) 0%, rgba(49,68,68,0.72) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0d2d3', endColorstr='#314444', GradientType=1 );
+}
+
+.card_container:nth-child(4) figure .back {
+  background: rgba(212,210,239,1);
+  background: -moz-linear-gradient(-45deg, rgba(212, 210, 239, 1) 0%, rgba(59, 51, 70, 0.59) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(212, 210, 239, 1)), color-stop(100%, rgba(59, 51, 70, 0.59)));
+  background: -webkit-linear-gradient(-45deg, rgba(212, 210, 239, 1) 0%, rgba(59, 51, 70, 0.59) 100%);
+  background: -o-linear-gradient(-45deg, rgba(212, 210, 239, 1) 0%, rgba(59, 51, 70, 0.59) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(212, 210, 239, 1) 0%, rgba(59, 51, 70, 0.59) 100%);
+  background: linear-gradient(135deg, rgba(212, 210, 239, 1) 0%, rgba(59, 51, 70, 0.59) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4d2ef', endColorstr='#3b3346', GradientType=1 );
+}
